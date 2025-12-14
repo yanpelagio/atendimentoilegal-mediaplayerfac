@@ -10,7 +10,7 @@ import sqlite3
 import random
 
 # COLE SEU TOKEN AQUI ↓
-TOKEN = 'MTQ0MzA3MjYxMTAwODUxMjA3MA.G5U1Ab.T1RjLMiAwAYs4Zo3vVq14hsnc8kmdhn6N9597E'
+TOKEN = 'DISCORD_TOKEN'
 
 intents = discord.Intents.default()
 intents.message_content = True
