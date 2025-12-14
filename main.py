@@ -8,6 +8,7 @@ import re
 from datetime import datetime, timedelta
 import sqlite3
 import random
+import os
 
 # COLE SEU TOKEN AQUI ↓
 TOKEN = 'DISCORD_TOKEN'
@@ -1408,4 +1409,14 @@ async def on_error(event, *args, **kwargs):
 
 print("🤖 Iniciando bot combinado (Atendimento + Monitoramento)...")
 print("⚠️ IMPORTANTE: Substitua SEU_TOKEN_AQUI pelo seu token real!")
+
+
+TOKEN = os.getenv('DISCORD_TOKEN')
+
+if not TOKEN:
+    print("❌ DISCORD_TOKEN não configurado!")
+    print("💡 Configure em: Square Cloud → Your App → Variables")
+    exit(1)
+
+
 bot.run(TOKEN)
